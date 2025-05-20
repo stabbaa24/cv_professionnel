@@ -1,12 +1,14 @@
-/* Base */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: #f7f9fc;
-    color: #1c1c1c;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fb;
+    color: #1a1a1a;
+    overflow-x: hidden;
 }
 
-/* Conteneur principal */
 .container {
     max-width: 960px;
     margin: auto;
@@ -14,31 +16,46 @@ body {
     text-align: center;
 }
 
-/* Titres */
+/* TITRE */
 h1 {
-    font-size: 2.2rem;
-    color: #1c2c4c;
+    font-size: 2.5rem;
+    color: #192841;
     font-weight: 700;
     margin-bottom: 6px;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    color: #3a7ca5;
+    font-size: 1.2rem;
+    color: #9376e0;
     margin-bottom: 28px;
+    animation: fadeInDown 0.9s ease-out;
 }
 
-/* Intro */
-.intro p {
-    font-size: 1rem;
+/* DESCRIPTION MISE EN VALEUR */
+.intro {
+    background-color: white;
+    border-left: 4px solid #9376e0;
+    padding: 20px 24px;
     max-width: 720px;
-    margin: 0 auto 35px auto;
-    line-height: 1.6;
-    color: #2c2c2c;
-    padding: 0 10px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1s ease-out;
 }
 
-/* QR cards */
+.intro p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+    text-align: left;
+}
+
+.intro strong {
+    color: #9376e0;
+    font-weight: 600;
+}
+
+/* QR CARDS */
 .cards {
     display: flex;
     flex-direction: column;
@@ -52,15 +69,17 @@ h1 {
     padding: 20px;
     width: 100%;
     max-width: 300px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.2s ease-out;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
@@ -75,22 +94,24 @@ h1 {
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    color: #1c2c4c;
-    transition: color 0.3s ease;
+    color: #192841;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .card a:hover {
-    color: #3a7ca5;
+    color: #9376e0;
+    border-bottom: 2px solid #9376e0;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
     margin-top: 40px;
     font-size: 0.9rem;
-    color: #3a7ca5;
+    color: #7a5ebc;
+    animation: fadeIn 1.5s ease-out;
 }
 
-/* Layout desktop/tablette */
+/* RESPONSIVE TABLETTE / PC */
 @media (min-width: 768px) {
     .cards {
         flex-direction: row;
@@ -99,14 +120,51 @@ footer {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
     }
 
     .subtitle {
-        font-size: 1.25rem;
+        font-size: 1.3rem;
     }
 
     .intro p {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
