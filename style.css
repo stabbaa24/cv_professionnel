@@ -25,6 +25,16 @@ h1 {
     animation: fadeInDown 0.8s ease-out;
 }
 
+.emoji {
+    font-size: 1.8rem;
+    margin-left: 8px;
+}
+
+.emoji {
+    font-size: 1.8rem;
+    margin-left: 8px;
+}
+
 .subtitle {
     font-size: 1.2rem;
     color: #9376e0;
@@ -34,13 +44,23 @@ h1 {
 
 /* DESCRIPTION MISE EN VALEUR */
 .intro {
-    background-color: white;
-    border-left: 4px solid #9376e0;
-    padding: 20px 24px;
+    background: linear-gradient(135deg, #ffffff, #f2f4fc);
+    border-left: 5px solid #9376e0;
+    padding: 24px 28px;
     max-width: 720px;
     margin: 0 auto 40px auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
     animation: fadeIn 1s ease-out;
+    position: relative;
+}
+
+.intro-header {
+    font-weight: 700;
+    color: #192841;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    padding-bottom: 6px;
 }
 
 .intro p {
@@ -105,12 +125,51 @@ h1 {
 
 /* FOOTER */
 footer {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: #7a5ebc;
-    animation: fadeIn 1.5s ease-out;
+    background-color: #f2f2fb;
+    padding: 20px;
+    margin-top: 60px;
+    text-align: center;
+    color: #5f4b8b;
+    font-size: 0.95rem;
+    border-top: 2px solid #e0e0f0;
 }
 
+footer a {
+    color: #9376e0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.skills {
+    max-width: 720px;
+    margin: 40px auto;
+    text-align: left;
+    background: #fff;
+    border-left: 4px solid #192841;
+    padding: 20px 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  
+  .skills h2 {
+    font-size: 1.3rem;
+    color: #192841;
+    margin-bottom: 16px;
+  }
+  
+  .skills ul {
+    padding-left: 1.2rem;
+  }
+  
+  .skills li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
 /* RESPONSIVE TABLETTE / PC */
 @media (min-width: 768px) {
     .cards {
